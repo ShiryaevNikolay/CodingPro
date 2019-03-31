@@ -7,20 +7,20 @@ print()
 p = 2
 p_default = p
 for k in range(5):
-    for i in range(n - 1):
-        x = 2
-        while a[i] >= p:
-            p = p_default * x
-            if a[i] != 0 and a[i] % p == 0:
-                a[i] = 0
-            x += 1
+    for i in range(n - 1):                  # Вычёркиваем
+        x = 2                               # в списке
+        while a[i] >= p:                    # числа
+            p = p_default * x               # от
+            if a[i] != 0 and a[i] % p == 0: # "2p"
+                a[i] = 0                    # до
+            x += 1                          # "n"
 
-    for i in range(n - 1):
-        print(a[i], end=' ')
+    for i in range(n - 1):      # Вывод результат после
+        print(a[i], end=' ')    # кождого прохода
 
-    j = 0
-    while a[j] <= p_default and j < n-2:
-        j += 1
-    p = a[j]
-    p_default = a[j]
-    print(p_default)
+    j = 0                                   # Поиск
+    while a[j] <= p_default and j < n-2:    # первого
+        j += 1                              # незачёркнутого
+    p = a[j]                                # числа
+    p_default = a[j]                        # в списке,
+    print(p_default)                        # большего "p"
