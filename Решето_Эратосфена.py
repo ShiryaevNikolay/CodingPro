@@ -6,7 +6,7 @@ for i in range(2, n+1):
 print()
 p = 2
 p_default = p
-for k in range(5):
+while p*p <= n:
     for i in range(n - 1):                  # Вычёркиваем
         x = 2                               # в списке
         while a[i] >= p:                    # числа
