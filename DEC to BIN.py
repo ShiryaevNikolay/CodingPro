@@ -1,4 +1,3 @@
-from random import randint
 import re
 
 while True:
@@ -21,15 +20,14 @@ def binary_representation(x, h):
 
 
 def decimal_representation(x):
-    string = str(x)
+    string_number = str(x)
     number = 0
-    for i in range(len(string)):
-        number += (2 ** (len(string) - 1 - i)) * int(string[i])
+    for i in range(len(string_number)):
+        number += (2 ** (len(string_number) - 1 - i)) * int(string_number[i])
     return print("\n", number, "\n")
 
 
 binary_representation(n, "")
-
 
 while True:
     try:
@@ -43,6 +41,5 @@ while True:
                 break
     except ValueError:
         print("Некорректный ввод! Чило должно состоять из 0 и 1.")
-
 
 decimal_representation(n)
